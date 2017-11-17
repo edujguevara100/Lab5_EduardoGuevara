@@ -5,6 +5,13 @@
  */
 package lab5_eduardoguevara;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
+
 /**
  *
  * @author edujg
@@ -27,21 +34,534 @@ public class PagLiga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jd_creart = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        tf_nomt = new javax.swing.JTextField();
+        tf_presu = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        js_copas = new com.toedter.components.JSpinField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        tf_estadio = new javax.swing.JTextField();
+        bt_creart = new javax.swing.JButton();
+        jd_modt = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        js_modcopas = new javax.swing.JSpinner();
+        tf_modestadio = new javax.swing.JTextField();
+        tf_modpresupuesto = new javax.swing.JTextField();
+        tf_modnomt = new javax.swing.JTextField();
+        bt_modt = new javax.swing.JButton();
+        jd_crearj = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        tf_nomj = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        tf_precio = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        ft_habilidad = new javax.swing.JFormattedTextField();
+        ft_tecnica = new javax.swing.JFormattedTextField();
+        ft_resist = new javax.swing.JFormattedTextField();
+        bt_crearj = new javax.swing.JButton();
+        cb_pos = new javax.swing.JComboBox<>();
+        jd_modj = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        tf_modnomj = new javax.swing.JTextField();
+        tf_modprecio = new javax.swing.JTextField();
+        ft_modhabilidad = new javax.swing.JFormattedTextField();
+        ft_modtecnica = new javax.swing.JFormattedTextField();
+        ft_modresist = new javax.swing.JFormattedTextField();
+        bt_modj = new javax.swing.JButton();
+        cb_modpos = new javax.swing.JComboBox<>();
+        jd_trans = new javax.swing.JDialog();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jl_jugad = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jl_equipos = new javax.swing.JList<>();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        bt_trans = new javax.swing.JButton();
+        bt_mj = new javax.swing.JButton();
+        bt_e = new javax.swing.JButton();
+        bt_mt = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jd_arbol = new javax.swing.JDialog();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jt_arbol = new javax.swing.JTree();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mi_creart = new javax.swing.JMenuItem();
+        mi_modt = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mi_crearj = new javax.swing.JMenuItem();
+        mi_modj = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        mi_trans = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jd_creart.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setText("Nombre:");
+        jd_creart.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 50, 24));
+        jd_creart.getContentPane().add(tf_nomt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 110, 30));
+        jd_creart.getContentPane().add(tf_presu, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 110, 30));
+
+        jLabel3.setText("Presupuesto:");
+        jd_creart.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 20));
+
+        js_copas.setMinimum(0);
+        jd_creart.getContentPane().add(js_copas, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
+
+        jLabel4.setText("Copas Ganadas:");
+        jd_creart.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        jLabel5.setText("Estadio:");
+        jd_creart.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+        jd_creart.getContentPane().add(tf_estadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 110, 30));
+
+        bt_creart.setText("Crear");
+        bt_creart.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_creartMouseClicked(evt);
+            }
+        });
+        jd_creart.getContentPane().add(bt_creart, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
+
+        jd_modt.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setText("Nombre:");
+        jd_modt.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 31, -1, -1));
+
+        jLabel13.setText("Presupuesto:");
+        jd_modt.getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        jLabel14.setText("Estadio:");
+        jd_modt.getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        jLabel15.setText("Copas:");
+        jd_modt.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jd_modt.getContentPane().add(js_modcopas, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
+        jd_modt.getContentPane().add(tf_modestadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 90, 30));
+        jd_modt.getContentPane().add(tf_modpresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 30));
+        jd_modt.getContentPane().add(tf_modnomt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 110, 30));
+
+        bt_modt.setText("Modificar");
+        jd_modt.getContentPane().add(bt_modt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, -1));
+
+        jd_crearj.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setText("Nombre:");
+        jd_crearj.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 40, -1, -1));
+        jd_crearj.getContentPane().add(tf_nomj, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 110, 30));
+
+        jLabel7.setText("Precio:");
+        jd_crearj.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jd_crearj.getContentPane().add(tf_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 110, 30));
+
+        jLabel8.setText("Posicion:");
+        jd_crearj.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jLabel10.setText("Habilidad:");
+        jd_crearj.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
+        jLabel11.setText("Tecnica:");
+        jd_crearj.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        jLabel12.setText("Resistencia:");
+        jd_crearj.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        jd_crearj.getContentPane().add(ft_habilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 90, 30));
+        jd_crearj.getContentPane().add(ft_tecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 90, 30));
+        jd_crearj.getContentPane().add(ft_resist, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 80, 30));
+
+        bt_crearj.setText("Crear");
+        bt_crearj.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_crearjMouseClicked(evt);
+            }
+        });
+        jd_crearj.getContentPane().add(bt_crearj, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, -1, -1));
+
+        cb_pos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Defensa", "Delantero", "Mediocampista", "Portero" }));
+        jd_crearj.getContentPane().add(cb_pos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 100, 30));
+
+        jd_modj.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setText("Nombre:");
+        jd_modj.getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 29, -1, -1));
+
+        jLabel17.setText("Precio:");
+        jd_modj.getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        jLabel18.setText("Posicion:");
+        jd_modj.getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+
+        jLabel19.setText("Habilidad:");
+        jd_modj.getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+
+        jLabel20.setText("Tecnica:");
+        jd_modj.getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
+        jLabel21.setText("Resistencia:");
+        jd_modj.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        jd_modj.getContentPane().add(tf_modnomj, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 110, 30));
+        jd_modj.getContentPane().add(tf_modprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 110, 30));
+
+        try {
+            ft_modhabilidad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jd_modj.getContentPane().add(ft_modhabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 80, 30));
+
+        try {
+            ft_modtecnica.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jd_modj.getContentPane().add(ft_modtecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 80, 30));
+
+        try {
+            ft_modresist.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jd_modj.getContentPane().add(ft_modresist, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 80, 30));
+
+        bt_modj.setText("Modificar");
+        bt_modj.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_modjMouseClicked(evt);
+            }
+        });
+        jd_modj.getContentPane().add(bt_modj, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
+
+        cb_modpos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Delantero", "Mediocampista", "Portero", "Defensa" }));
+        jd_modj.getContentPane().add(cb_modpos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 100, 30));
+
+        jd_trans.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jl_jugad.setModel(new DefaultListModel());
+        jScrollPane1.setViewportView(jl_jugad);
+
+        jd_trans.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 140, 130));
+
+        jl_equipos.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(jl_equipos);
+
+        jd_trans.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 130));
+
+        jLabel22.setText("Equipos:");
+        jd_trans.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
+
+        jLabel23.setText("Jugadores:");
+        jd_trans.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+
+        bt_trans.setText("Transferir");
+        jd_trans.getContentPane().add(bt_trans, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+
+        bt_mj.setText("Modificar Jugador");
+        bt_mj.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_mjMouseClicked(evt);
+            }
+        });
+        jd_trans.getContentPane().add(bt_mj, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+
+        bt_e.setText("Eliminar Equipo");
+        bt_e.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_eMouseClicked(evt);
+            }
+        });
+        jd_trans.getContentPane().add(bt_e, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
+
+        bt_mt.setText("Modificar Equipo");
+        bt_mt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_mtMouseClicked(evt);
+            }
+        });
+        jd_trans.getContentPane().add(bt_mt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+
+        jButton1.setText("Eliminar Jugador");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jd_trans.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
+
+        jd_arbol.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Liga Española");
+        jt_arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane3.setViewportView(jt_arbol);
+
+        jd_arbol.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 193, 153));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setText("Liga Española");
+        jd_arbol.getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Bienvenido a La pagina de La Liga Online");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 380, 80));
+
+        jMenu1.setText("Equipos");
+
+        mi_creart.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        mi_creart.setText("Crear");
+        mi_creart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_creartActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mi_creart);
+
+        mi_modt.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        mi_modt.setText("Modificar");
+        mi_modt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_modtActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mi_modt);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Jugadores");
+
+        mi_crearj.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
+        mi_crearj.setText("Crear");
+        mi_crearj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_crearjActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_crearj);
+
+        mi_modj.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_MASK));
+        mi_modj.setText("Modificar");
+        mi_modj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_modjActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_modj);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Transacciones");
+
+        mi_trans.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
+        mi_trans.setText("Transferir");
+        mi_trans.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_transActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mi_trans);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Ver Arbol");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Ver Arbol");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mi_creartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_creartActionPerformed
+        // TODO add your handling code here:
+        jd_creart.setModal(true);
+        jd_creart.pack();
+        jd_creart.setLocationRelativeTo(this);
+        jd_creart.setVisible(true);
+    }//GEN-LAST:event_mi_creartActionPerformed
+
+    private void mi_modtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_modtActionPerformed
+        // TODO add your handling code here:
+        jd_trans.pack();
+        jd_trans.setModal(true);
+        jd_trans.setLocationRelativeTo(this);
+        jd_trans.setVisible(true);
+    }//GEN-LAST:event_mi_modtActionPerformed
+
+    private void mi_crearjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_crearjActionPerformed
+        // TODO add your handling code here:
+        jd_crearj.setModal(true);
+        jd_crearj.pack();
+        jd_crearj.setLocationRelativeTo(this);
+        jd_crearj.setVisible(true);
+    }//GEN-LAST:event_mi_crearjActionPerformed
+
+    private void bt_creartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_creartMouseClicked
+        // TODO add your handling code here:
+        String nombre = tf_nomt.getText();
+        float pres = Float.parseFloat(tf_presu.getText());
+        int copas = js_copas.getValue();
+        String estadio = tf_estadio.getText();
+        equipos.add(new Equipo(nombre, pres, copas, estadio));
+        DefaultListModel modelo = (DefaultListModel) jl_equipos.getModel();
+        modelo.addElement(new Equipo(nombre, pres, copas, estadio));
+        DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+        DefaultMutableTreeNode nodo_liga;
+        nodo_liga = new DefaultMutableTreeNode(new Equipo(nombre, pres, copas, estadio));
+        raiz.add(nodo_liga);
+        m.reload();
+        jl_equipos.setModel(modelo);
+        tf_nomt.setText("");
+        tf_presu.setText("");
+        js_copas.setValue(0);
+        tf_estadio.setText("");
+    }//GEN-LAST:event_bt_creartMouseClicked
+
+    private void bt_crearjMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crearjMouseClicked
+        // TODO add your handling code here:
+        String nombre = tf_nomj.getText();
+        float precio = Float.parseFloat(tf_precio.getText());
+        String posicion = (String) cb_pos.getSelectedItem();
+        float habilidad = Float.parseFloat(ft_habilidad.getText());
+        float tecnica = Float.parseFloat(ft_tecnica.getText());
+        float resi = Float.parseFloat(ft_resist.getText());
+        String disp = "Disponible";
+        jugadores.add(new Jugador(nombre, precio, posicion, disp, habilidad, tecnica, resi));
+        DefaultListModel modelo = (DefaultListModel) jl_jugad.getModel();
+        modelo.addElement(new Jugador(nombre, precio, posicion, disp, habilidad, tecnica, resi));
+        jl_jugad.setModel(modelo);
+        tf_nomj.setText("");
+        tf_precio.setText("");
+        cb_pos.setSelectedIndex(0);
+        ft_habilidad.setText("");
+        ft_tecnica.setText("");
+        ft_resist.setText("");
+
+    }//GEN-LAST:event_bt_crearjMouseClicked
+
+    private void mi_transActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_transActionPerformed
+        // TODO add your handling code here:
+        jd_trans.setModal(true);
+        jd_trans.setLocationRelativeTo(this);
+        jd_trans.pack();
+        jd_trans.setVisible(true);
+    }//GEN-LAST:event_mi_transActionPerformed
+
+    private void mi_modjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_modjActionPerformed
+        // TODO add your handling code here:
+        jd_trans.pack();
+        jd_trans.setModal(true);
+        jd_trans.setLocationRelativeTo(this);
+        jd_trans.setVisible(true);
+
+    }//GEN-LAST:event_mi_modjActionPerformed
+
+    private void bt_mjMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mjMouseClicked
+        // TODO add your handling code here:
+        if (jl_jugad.getSelectedIndex() >= 0) {
+            DefaultListModel ml = (DefaultListModel) jl_jugad.getModel();
+            Jugador t = (Jugador) ml.getElementAt(jl_jugad.getSelectedIndex());
+            actual = t;
+            tf_modnomj.setText(t.getNombre());
+            String precio = t.getPrecio()+"";
+            String nprecio = precio.substring(0, precio.length()-3);
+            tf_modprecio.setText(nprecio);
+            ft_modhabilidad.setText(Float.toString(t.getHabilidad()));
+            ft_modtecnica.setText(Float.toString(t.getHabilidad()));
+            ft_modresist.setText(Float.toString(t.getHabilidad()));
+            jd_modj.setModal(true);
+            jd_modj.setLocationRelativeTo(this);
+            jd_modj.pack();
+            jd_modj.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay Jugador Seleccionado");
+        }
+    }//GEN-LAST:event_bt_mjMouseClicked
+
+    private void bt_mtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mtMouseClicked
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_bt_mtMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void bt_modjMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modjMouseClicked
+        // TODO add your handling code here:
+        System.out.println(actual.toString());
+        for (int i = 0; i < jugadores.size(); i++) {
+            if (jugadores.get(i).getNombre().equals(actual.getNombre())) {
+                jugadores.get(i).setNombre(tf_modnomj.getText());
+                jugadores.get(i).setPos((String) cb_pos.getSelectedItem());
+                jugadores.get(i).setPrecio(Float.parseFloat(tf_precio.getText()));
+                jugadores.get(i).setHabilidad(Float.parseFloat(ft_modhabilidad.getText()));
+                jugadores.get(i).setTecnica(Float.parseFloat(ft_modtecnica.getText()));
+                jugadores.get(i).setResist(Float.parseFloat(ft_modresist.getText()));
+            }
+        }
+        System.out.println(jugadores.contains(actual));
+        jl_jugad.setModel(new DefaultListModel());
+        DefaultListModel modelo = (DefaultListModel) jl_jugad.getModel();
+        for (int i = 0; i < jugadores.size(); i++) {
+            modelo.addElement(jugadores.get(i));
+        }
+        jl_jugad.setModel(modelo);
+    }//GEN-LAST:event_bt_modjMouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        jd_arbol.pack();
+        jd_arbol.setModal(true);
+        jd_arbol.setLocationRelativeTo(this);
+        jd_arbol.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void bt_eMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eMouseClicked
+        // TODO add your handling code here:
+        if (jl_equipos.getSelectedIndex() >= 0) {
+            DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode root = (DefaultMutableTreeNode) modelo.getRoot();
+            TreeNode c = root.getChildAt(jl_equipos.getSelectedIndex());
+            DefaultListModel ml = (DefaultListModel) jl_equipos.getModel();
+            jl_equipos.setModel(ml);
+            /*Equipo t = (Equipo) ml.getElementAt(jl_equipos.getSelectedIndex());
+            act = t;
+            jd_modt.setModal(true);
+            jd_modt.setLocationRelativeTo(this);
+            jd_modt.pack();
+            jd_modt.setVisible(true);*/
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay equipo seleccionado");
+        }
+    }//GEN-LAST:event_bt_eMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +599,86 @@ public class PagLiga extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_crearj;
+    private javax.swing.JButton bt_creart;
+    private javax.swing.JButton bt_e;
+    private javax.swing.JButton bt_mj;
+    private javax.swing.JButton bt_modj;
+    private javax.swing.JButton bt_modt;
+    private javax.swing.JButton bt_mt;
+    private javax.swing.JButton bt_trans;
+    private javax.swing.JComboBox<String> cb_modpos;
+    private javax.swing.JComboBox<String> cb_pos;
+    private javax.swing.JFormattedTextField ft_habilidad;
+    private javax.swing.JFormattedTextField ft_modhabilidad;
+    private javax.swing.JFormattedTextField ft_modresist;
+    private javax.swing.JFormattedTextField ft_modtecnica;
+    private javax.swing.JFormattedTextField ft_resist;
+    private javax.swing.JFormattedTextField ft_tecnica;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JDialog jd_arbol;
+    private javax.swing.JDialog jd_crearj;
+    private javax.swing.JDialog jd_creart;
+    private javax.swing.JDialog jd_modj;
+    private javax.swing.JDialog jd_modt;
+    private javax.swing.JDialog jd_trans;
+    private javax.swing.JList<String> jl_equipos;
+    private javax.swing.JList<String> jl_jugad;
+    private com.toedter.components.JSpinField js_copas;
+    private javax.swing.JSpinner js_modcopas;
+    private javax.swing.JTree jt_arbol;
+    private javax.swing.JMenuItem mi_crearj;
+    private javax.swing.JMenuItem mi_creart;
+    private javax.swing.JMenuItem mi_modj;
+    private javax.swing.JMenuItem mi_modt;
+    private javax.swing.JMenuItem mi_trans;
+    private javax.swing.JTextField tf_estadio;
+    private javax.swing.JTextField tf_modestadio;
+    private javax.swing.JTextField tf_modnomj;
+    private javax.swing.JTextField tf_modnomt;
+    private javax.swing.JTextField tf_modprecio;
+    private javax.swing.JTextField tf_modpresupuesto;
+    private javax.swing.JTextField tf_nomj;
+    private javax.swing.JTextField tf_nomt;
+    private javax.swing.JTextField tf_precio;
+    private javax.swing.JTextField tf_presu;
     // End of variables declaration//GEN-END:variables
+
+    private ArrayList<Equipo> equipos = new ArrayList();
+    private ArrayList<Jugador> jugadores = new ArrayList();
+    private Jugador actual;
+    private Equipo act;
 }
