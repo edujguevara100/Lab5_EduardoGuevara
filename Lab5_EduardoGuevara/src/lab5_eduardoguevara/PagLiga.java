@@ -122,7 +122,7 @@ public class PagLiga extends javax.swing.JFrame {
         jd_creart.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 20));
 
         js_copas.setMinimum(0);
-        jd_creart.getContentPane().add(js_copas, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
+        jd_creart.getContentPane().add(js_copas, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 40, 30));
 
         jLabel4.setText("Copas Ganadas:");
         jd_creart.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
@@ -152,12 +152,17 @@ public class PagLiga extends javax.swing.JFrame {
 
         jLabel15.setText("Copas:");
         jd_modt.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-        jd_modt.getContentPane().add(js_modcopas, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
+        jd_modt.getContentPane().add(js_modcopas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 40, 30));
         jd_modt.getContentPane().add(tf_modestadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 90, 30));
         jd_modt.getContentPane().add(tf_modpresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 30));
         jd_modt.getContentPane().add(tf_modnomt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 110, 30));
 
         bt_modt.setText("Modificar");
+        bt_modt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_modtMouseClicked(evt);
+            }
+        });
         jd_modt.getContentPane().add(bt_modt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, -1));
 
         jd_crearj.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -181,8 +186,26 @@ public class PagLiga extends javax.swing.JFrame {
 
         jLabel12.setText("Resistencia:");
         jd_crearj.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+
+        try {
+            ft_habilidad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         jd_crearj.getContentPane().add(ft_habilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 90, 30));
+
+        try {
+            ft_tecnica.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         jd_crearj.getContentPane().add(ft_tecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 90, 30));
+
+        try {
+            ft_resist.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         jd_crearj.getContentPane().add(ft_resist, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 80, 30));
 
         bt_crearj.setText("Crear");
@@ -219,21 +242,21 @@ public class PagLiga extends javax.swing.JFrame {
         jd_modj.getContentPane().add(tf_modprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 110, 30));
 
         try {
-            ft_modhabilidad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+            ft_modhabilidad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         jd_modj.getContentPane().add(ft_modhabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 80, 30));
 
         try {
-            ft_modtecnica.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+            ft_modtecnica.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
         jd_modj.getContentPane().add(ft_modtecnica, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 80, 30));
 
         try {
-            ft_modresist.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###")));
+            ft_modresist.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -269,6 +292,11 @@ public class PagLiga extends javax.swing.JFrame {
         jd_trans.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         bt_trans.setText("Transferir");
+        bt_trans.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_transMouseClicked(evt);
+            }
+        });
         jd_trans.getContentPane().add(bt_trans, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         bt_mj.setText("Modificar Jugador");
@@ -296,6 +324,11 @@ public class PagLiga extends javax.swing.JFrame {
         jd_trans.getContentPane().add(bt_mt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         jButton1.setText("Eliminar Jugador");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -489,8 +522,8 @@ public class PagLiga extends javax.swing.JFrame {
             Jugador t = (Jugador) ml.getElementAt(jl_jugad.getSelectedIndex());
             actual = t;
             tf_modnomj.setText(t.getNombre());
-            String precio = t.getPrecio()+"";
-            String nprecio = precio.substring(0, precio.length()-3);
+            String precio = t.getPrecio() + "";
+            String nprecio = precio.substring(0, precio.length() - 2);
             tf_modprecio.setText(nprecio);
             ft_modhabilidad.setText(Float.toString(t.getHabilidad()));
             ft_modtecnica.setText(Float.toString(t.getHabilidad()));
@@ -506,7 +539,23 @@ public class PagLiga extends javax.swing.JFrame {
 
     private void bt_mtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mtMouseClicked
         // TODO add your handling code here:
-
+        if (jl_equipos.getSelectedIndex() >= 0) {
+            DefaultListModel ml = (DefaultListModel) jl_equipos.getModel();
+            Equipo t = (Equipo) ml.getElementAt(jl_equipos.getSelectedIndex());
+            act = t;
+            tf_modnomt.setText(t.getNombre());
+            String pres = t.getPresupuesto() + "";
+            String p = pres.substring(0, pres.length() - 2);
+            tf_modpresupuesto.setText(p);
+            tf_modestadio.setText(t.getEstadio());
+            js_modcopas.setValue(t.getCopasg());
+            jd_modt.setModal(true);
+            jd_modt.setLocationRelativeTo(this);
+            jd_modt.pack();
+            jd_modt.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay Jugador Seleccionado");
+        }
 
     }//GEN-LAST:event_bt_mtMouseClicked
 
@@ -549,8 +598,10 @@ public class PagLiga extends javax.swing.JFrame {
         if (jl_equipos.getSelectedIndex() >= 0) {
             DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode root = (DefaultMutableTreeNode) modelo.getRoot();
-            TreeNode c = root.getChildAt(jl_equipos.getSelectedIndex());
+            DefaultMutableTreeNode c = (DefaultMutableTreeNode) root.getChildAt(jl_equipos.getSelectedIndex());
+            root.remove(c);
             DefaultListModel ml = (DefaultListModel) jl_equipos.getModel();
+            ml.remove(jl_equipos.getSelectedIndex());
             jl_equipos.setModel(ml);
             /*Equipo t = (Equipo) ml.getElementAt(jl_equipos.getSelectedIndex());
             act = t;
@@ -562,6 +613,80 @@ public class PagLiga extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No hay equipo seleccionado");
         }
     }//GEN-LAST:event_bt_eMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel ml = (DefaultListModel) jl_jugad.getModel();
+        if (jl_jugad.getSelectedIndex() >= 0) {
+            for (int i = 0; i < jugadores.size(); i++) {
+                if (jugadores.get(i).getNombre().equals(ml.getElementAt(jl_jugad.getSelectedIndex()))) {
+                    jugadores.remove(i);
+                }
+            }
+            ml.removeElementAt(jl_jugad.getSelectedIndex());
+            jl_jugad.setModel(ml);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay Jugador Seleccionado");
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void bt_modtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modtMouseClicked
+        // TODO add your handling code here:
+        for (int i = 0; i < equipos.size(); i++) {
+            if (equipos.get(i).getNombre().equals(act.getNombre())) {
+                equipos.get(i).setNombre(tf_modnomt.getText());
+                equipos.get(i).setPresupuesto(Float.parseFloat(tf_modpresupuesto.getText()));
+                equipos.get(i).setCopasg((Integer) js_modcopas.getValue());
+            }
+        }
+        jl_equipos.setModel(new DefaultListModel());
+        DefaultListModel modelo = (DefaultListModel) jl_equipos.getModel();
+        for (int i = 0; i < equipos.size(); i++) {
+            modelo.addElement(equipos.get(i));
+        }
+        jl_jugad.setModel(modelo);
+        DefaultTreeModel mod = (DefaultTreeModel) jt_arbol.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) mod.getRoot();
+        root.removeAllChildren();
+        for (int i = 0; i < equipos.size(); i++) {
+            root.add(new DefaultMutableTreeNode(equipos.get(i)));
+        }
+        mod.setRoot(root);
+        jt_arbol.setModel(mod);
+    }//GEN-LAST:event_bt_modtMouseClicked
+
+    private void bt_transMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_transMouseClicked
+        // TODO add your handling code here:
+        DefaultListModel m = (DefaultListModel) jl_jugad.getModel();
+        DefaultListModel m2 = (DefaultListModel) jl_equipos.getModel();
+        DefaultTreeModel m3 = (DefaultTreeModel) jt_arbol.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) m3.getRoot();
+        DefaultMutableTreeNode nodo_equipo = (DefaultMutableTreeNode) root.getChildAt(jl_equipos.getSelectedIndex());
+        //root.remove(nodo_equipo);
+        if (jl_jugad.getSelectedIndex() >= 0 && jl_equipos.getSelectedIndex() >= 0) {
+            if (((Jugador) m.getElementAt(jl_jugad.getSelectedIndex())).getDisponibilidad().equals("Disponible")) {
+                if (((Equipo) m2.getElementAt(jl_equipos.getSelectedIndex())).getPresupuesto() >= ((Jugador) m.getElementAt(jl_jugad.getSelectedIndex())).getPrecio()) {
+                    ((Jugador) m.getElementAt(jl_jugad.getSelectedIndex())).setDisponibilidad("No disponible");
+
+                    String x = ((Equipo) (m2.getElementAt(jl_equipos.getSelectedIndex()))).toString();
+                    String y = ((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).toString();
+                    if (x.equals(y)) {
+                        DefaultMutableTreeNode jug = new DefaultMutableTreeNode(((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).getJugad().add(((Jugador) m.getElementAt(jl_jugad.getSelectedIndex()))));
+                        root.getChildAt(jl_equipos.getSelectedIndex());
+                        m3.reload();
+                    }
+                    //if(((Equipo)(root.getChildAt(jl_equipos.getSelectedIndex()))).toString().equals(((Equipo)(m2.getElementAt(jl_equipos.getSelectedIndex())).toString()))){
+
+                    //}
+                    //((Jugador) m.getElementAt(jl_jugad.getSelectedIndex()))
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "No se puede realizar la transaccion");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Porfavor seleccione equipo y jugador");
+        }
+    }//GEN-LAST:event_bt_transMouseClicked
 
     /**
      * @param args the command line arguments
