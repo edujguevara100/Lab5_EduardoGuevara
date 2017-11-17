@@ -598,17 +598,17 @@ public class PagLiga extends javax.swing.JFrame {
         if (jl_equipos.getSelectedIndex() >= 0) {
             DefaultTreeModel modelo = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode root = (DefaultMutableTreeNode) modelo.getRoot();
-            DefaultMutableTreeNode c = (DefaultMutableTreeNode) root.getChildAt(jl_equipos.getSelectedIndex());
-            root.remove(c);
             DefaultListModel ml = (DefaultListModel) jl_equipos.getModel();
+            Equipo e = (Equipo) ml.get(jl_equipos.getSelectedIndex());
+            for (int i = 0; i < root.getChildCount(); i++) {
+                if (root.getChildAt(i).toString().equals(e.getNombre())) {
+                    root.remove(jl_equipos.getSelectedIndex());
+                }
+            }
+            //DefaultMutableTreeNode c = (DefaultMutableTreeNode) root.getChildAt(jl_equipos.getSelectedIndex());
+            //root.remove(c);
             ml.remove(jl_equipos.getSelectedIndex());
             jl_equipos.setModel(ml);
-            /*Equipo t = (Equipo) ml.getElementAt(jl_equipos.getSelectedIndex());
-            act = t;
-            jd_modt.setModal(true);
-            jd_modt.setLocationRelativeTo(this);
-            jd_modt.pack();
-            jd_modt.setVisible(true);*/
         } else {
             JOptionPane.showMessageDialog(null, "No hay equipo seleccionado");
         }
@@ -662,7 +662,7 @@ public class PagLiga extends javax.swing.JFrame {
         DefaultTreeModel m3 = (DefaultTreeModel) jt_arbol.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) m3.getRoot();
         DefaultMutableTreeNode nodo_equipo = (DefaultMutableTreeNode) root.getChildAt(jl_equipos.getSelectedIndex());
-        //root.remove(nodo_equipo);
+        root.remove(nodo_equipo);
         if (jl_jugad.getSelectedIndex() >= 0 && jl_equipos.getSelectedIndex() >= 0) {
             if (((Jugador) m.getElementAt(jl_jugad.getSelectedIndex())).getDisponibilidad().equals("Disponible")) {
                 if (((Equipo) m2.getElementAt(jl_equipos.getSelectedIndex())).getPresupuesto() >= ((Jugador) m.getElementAt(jl_jugad.getSelectedIndex())).getPrecio()) {
@@ -671,8 +671,12 @@ public class PagLiga extends javax.swing.JFrame {
                     String x = ((Equipo) (m2.getElementAt(jl_equipos.getSelectedIndex()))).toString();
                     String y = ((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).toString();
                     if (x.equals(y)) {
-                        DefaultMutableTreeNode jug = new DefaultMutableTreeNode(((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).getJugad().add(((Jugador) m.getElementAt(jl_jugad.getSelectedIndex()))));
+                        ((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).getJugad().add(((Jugador) (m.getElementAt(jl_jugad.getSelectedIndex()))));
+                        //DefaultMutableTreeNode jug = new DefaultMutableTreeNode(((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).getJugad().add(((Jugador) m.getElementAt(jl_jugad.getSelectedIndex()))));
                         root.getChildAt(jl_equipos.getSelectedIndex());
+                        DefaultMutableTreeNode nodo_jug = new DefaultMutableTreeNode(((Equipo) root.getChildAt(jl_equipos.getSelectedIndex())).getJugad());
+                        nodo_equipo.add(nodo_jug);
+                        root.add(nodo_equipo);
                         m3.reload();
                     }
                     //if(((Equipo)(root.getChildAt(jl_equipos.getSelectedIndex()))).toString().equals(((Equipo)(m2.getElementAt(jl_equipos.getSelectedIndex())).toString()))){
